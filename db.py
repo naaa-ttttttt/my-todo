@@ -16,5 +16,15 @@ def init_db():
     connection.commit()
     connection.close()
 
+
+def add_todo(task):
+    connection = sqlite3.connect("todos.db")
+    cursor = connection.cursor() 
+    cursor.execute("INSERT INTO todos (task) VALUES (?)", (task, ))
+    connection.commit()
+    connection.close()
+    print("Ran Successful")
+
+
 if __name__ == "__main__":
-    init_db()
+    #add_todo("pray and code")
