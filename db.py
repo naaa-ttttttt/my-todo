@@ -34,6 +34,24 @@ def get_all_todos():
     connection.close()
     return rows
 
+def update_todo(todo_id):
+    connection = sqlite3.connect("todos.db")
+    cursor = connection.cursor()
+    cursor.execute("UPDATE todos SET status = NOT status WHERE id = ?", (todo_id,))
+    connection.commit()
+    connection.close()
+
+
+#def delete_todo(todo_id):
+ #   connection = sqlite3.connect("todos.db")
+  #  cursor = connection.cursor()
+   # cursor.execute("DELETE FROM todos WHERE id = ?", (todo_id,))
+    #connection.commit()
+    #connection.close()
+
+
 if __name__ == "__main__":
-    #add_todo("pray and code")
+    add_todo("pray and code")
     print(get_all_todos())
+    update_todo(1)
+   # delete_todo(1)
