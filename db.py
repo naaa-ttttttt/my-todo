@@ -53,5 +53,4 @@ def delete_todo(todo_id):
 if __name__ == "__main__":
     add_todo("pray and code")
     print(get_all_todos())
-    update_todo(1)
-    delete_todo(1)
+    delete_todo(13)
