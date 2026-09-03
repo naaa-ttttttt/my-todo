@@ -22,13 +22,13 @@ def create_todo():
     return jsonify({"message: Todo added"})
 
 @app.route("/todos/<int:todo_id>", methods=["PUT"])
-def update_todo(todo_id):
+def update_todo_route(todo_id):
     update_todo(todo_id)
     return jsonify({"message": "Todo status update"})
 
 
 @app.route("/todos/<int:todo_id>", methods=["DELETE"])
-def delete_todo(todo_id):
+def delete_todo_route(todo_id):
     delete_todo(todo_id)
     return jsonify({"message": "Todo task deleted"})
 
