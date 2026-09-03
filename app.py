@@ -21,5 +21,11 @@ def create_todo():
     add_todo(task)
     return jsonify({"message: Todo added"})
 
+@app.route("/todos/<int:todo_id>", methods=["PUT"])
+def update_todo(todo_id):
+    update_todo(todo_id)
+    return jsonify({"message": "Todo status update"})
+
+
 if __name__ == "__main__":
     app.run(debug=True)
