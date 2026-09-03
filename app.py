@@ -27,5 +27,10 @@ def update_todo(todo_id):
     return jsonify({"message": "Todo status update"})
 
 
+@app.route("/todos/<int:todo_id>", methods=["DELETE"])
+def delete_todo(todo_id):
+    delete_todo(todo_id)
+    return jsonify({"message": "Todo task deleted"})
+
 if __name__ == "__main__":
     app.run(debug=True)
