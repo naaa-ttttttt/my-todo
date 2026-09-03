@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from db import get_all_todos, add_todo
+from db import get_all_todos, add_todo, update_todo, delete_todo
 
 app = Flask(__name__)
 
