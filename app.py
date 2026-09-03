@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 from db import get_all_todos, add_todo, update_todo, delete_todo
 
 app = Flask(__name__)
