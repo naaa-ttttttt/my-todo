@@ -19,7 +19,7 @@ def create_todo():
     data = request.get_json()
     task = data["task"]
     add_todo(task)
-    return jsonify({"message: Todo added"})
+    return jsonify({"message": "Todo created successfully"})
 
 @app.route("/todos/<int:todo_id>", methods=["PUT"])
 def update_todo_route(todo_id):
